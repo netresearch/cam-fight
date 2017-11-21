@@ -1,0 +1,18 @@
+{
+    "name": "netresearch/photo-challenge",
+    "description": "PWA experiment",
+    "type": "project",
+    "require": {
+        "enyo/dropzone": "^5.1"
+    },
+    "require-dev": {
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andre Lademann",
+            "email": "andre.lademann@netresearch.de"
+        }
+    ],
+    "minimum-stability": "dev"
+}
