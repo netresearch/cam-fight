@@ -15,6 +15,18 @@ include_once '../config/database.php';
 $database = new Database();
 $db = $database->getConnection();
 
-var_dump($_GET);
 
 $challenge = new Challenge($db);
+
+$challenge->setId($_GET['id']);
+
+$challenge->show();
+
+$arChallenge = array(
+    'id' => $challenge->nId,
+    'title' => $challenge->strTitle,
+    'desciption' => $challenge->strDescription,
+    'bgColor' => $challenge->strBgColor
+);
+
+print_r(json_encode($arChallenge));
