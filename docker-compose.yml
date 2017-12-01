@@ -1,44 +1,16 @@
-version: '3.2'
+version: '3.1'
 services:
-  web:
-    image: nginx
-    restart: on-failure
-    links:
-      - php
-    volumes:
-      - ./app:/var/www/html/:ro
-      #- ./build/nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
-      #- ./build/nginx/conf.d:/etc/nginx/conf.d:ro
-    ports:
-      - 8020:80
-      #- 443:443
-  php:
-    image: php:7.1
-    restart: on-failure
-    volumes:
-      - ./app:/var/www/html
-    depends_on:
-      - db
-    links:
-      - db
-    environment:
-      - DB_HOST=db
-      - DB_NAME=${DB_NAME}
-      - DB_USER=${DB_USER}
-      - DB_PASSWORD=${DB_PASSWORD}
   db:
     image: mariadb
-    restart: on-failure
     volumes:
       - db-data:/var/lib/mysql
     environment:
-      - MYSQL_RANDOM_ROOT_PASSWORD=true
-      - MYSQL_DATABASE=${DB_NAME}
-      - MYSQL_USER=${DB_USER}
-      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD
+      - MYSQL_DATABASE
+      - MYSQL_USER
+      - MYSQL_PASSWORD
     ports:
-      - 3306:3306
+      - 33061:3306
 
 volumes:
   db-data:
-    driver: local
