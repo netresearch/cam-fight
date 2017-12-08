@@ -1,18 +1,24 @@
 {
-    "name": "netresearch/cam-fight",
-    "description": "PWA experiment",
-    "type": "project",
-    "require": {
-        "enyo/dropzone": "^5.1"
+  "name": "netresearch/cam-fight-server",
+  "description": "Cam fighters API",
+  "type": "project",
+  "require": {
+    "php": "~7.1.0",
+    "ext-gd": "*",
+    "aws/aws-sdk-php": "~2.6"
+  },
+  "require-dev": {
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andre Lademann",
+      "email": "andre.lademann@netresearch.de"
     },
-    "require-dev": {
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Andre Lademann",
-            "email": "andre.lademann@netresearch.de"
-        }
-    ],
-    "minimum-stability": "dev"
+    {
+      "name": "Thomas Schöne",
+      "email": "thomas.schoene@netresearch.de"
+    }
+  ],
+  "minimum-stability": "dev"
 }

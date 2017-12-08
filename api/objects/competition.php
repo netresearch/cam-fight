@@ -6,7 +6,7 @@
  * Time: 14:15
  */
 
-class Challenge
+class Competition
 {
     /**
      *
@@ -14,15 +14,17 @@ class Challenge
      */
     public $nId;
 
-    public $strTitle;
+    public $nStartChallenges;
 
-    public $strDescription;
+    public $nStopChallenges;
 
-    public $strBgColor;
+    public $nStartVotes;
+
+    public $nStopVotes;
 
     protected $connection;
 
-    protected $strTableName = 'Challenges';
+    protected $strTableName = 'Competition';
 
     public function __construct($db)
     {
@@ -51,21 +53,9 @@ class Challenge
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
         // set values to object properties
-        $this->strTitle = $row['title'];
-        $this->strDescription = $row['description'];
-        $this->strBgColor = $row['bgColor'];
-    }
-
-    public function list()
-    {
-        $strQuery = "SELECT * FROM " . $this->strTableName . " WHERE 1";
-
-        // prepare query statement
-        $stmt = $this->connection->prepare($strQuery);
-
-        // execute query
-        $stmt->execute();
-
-        return $stmt;
+        $this->nStartChallenges = $row['startChallenges'];
+        $this->nStopChallenges = $row['stopChallenges'];
+        $this->nStartVotes = $row['startVotes'];
+        $this->nStopVotes = $row['stopVotes'];
     }
 }

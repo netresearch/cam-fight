@@ -1,0 +1,21 @@
+<h2> So funktioniert’s </h2>
+
+<ol>
+<li> Bestimmt einen Teamleiter. Der Teamleiter nimmt die Fotos auf und lädt sie in die App hoch.</li>
+<li> Arbeitet als Team zusammen, um die Foto-Challenges zu erfüllen. Ob im Büro oder draußen auf der Straße oder im Park, ob kreativ, lustig oder interessant – lasst eurer Fantasie freien Lauf!</li>
+<li> Ihr könnt nur ein Foto pro Challenge hochladen. Wenn ihr ein weiteres Foto in einer Challenge hochladet, wird das alte Foto gelöscht und mit dem neuen Foto ersetzt. </li>
+<li> Achtet auf die Zeit, die euch im Nacken sitzt! </li>
+<li> Nach Ablauf der Spielzeit findet euch bitte wieder in der großen Küche ein. </li>
+<li> Nun kann jeder einzelne für seine Lieblingsfotos mit dem Handy voten! Bitte stimmt pro Challenge für ein Foto, welches NICHT von eurer eigenen Gruppe stammt.</li>
+</ol>
+
+<h2> This is how it works </h2>
+
+<ol>
+<li> Appoint a teamleader. The teamleader will take the photos and upload them into the app.</li>
+<li> Work together as a team to folfill the challenges. Within the office or outside on the street or in the park, creative, funny or interesting – there are no limits but your imagination!</li>
+<li> You can only upload one photo per challenge. If you opload another photo to a challenge, the old one will be deleted and replaced with the new one.</li>
+<li> Mind the time – it’s running out quickly!</li>
+<li> After time has run out, return to the big kitchen.</li>
+<li> Now everyone can vote for their favourite photos using their phones. Please vote for one photo per challenge that is NOT from your own group</li>
+</ol>

@@ -12,17 +12,16 @@ class Help
      *
      * @var string
      */
-    protected $arYml;
+    protected $strYml;
 
     public function __construct()
     {
-        $strYmlPath = '../config/help.yml';
-        $strYml = file_get_contents($strYmlPath);
-        $this->arYml = yaml_parse($strYml);
+        $strYmlPath = '../config/help.txt';
+        $this->strYml = file_get_contents($strYmlPath);
     }
 
     public function show()
     {
-        return $this->arYml;
+        return $this->strYml;
     }
 }

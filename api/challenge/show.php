@@ -7,7 +7,7 @@
  */
 
 header("Access-Control-Allow-Origin: *");
-header("Content-Typ: application/json; charset=UTF-9");
+header("Content-Type: application/json; charset=UTF-8");
 
 include_once '../objects/challenge.php';
 include_once '../config/database.php';
@@ -18,15 +18,19 @@ $db = $database->getConnection();
 
 $challenge = new Challenge($db);
 
-$challenge->setId($_GET['id']);
+$challenge->setId(htmlspecialchars($_GET['id']));
 
 $challenge->show();
 
 $arChallenge = array(
-    'id' => $challenge->nId,
+    'id' => (int) $challenge->nId,
     'title' => $challenge->strTitle,
-    'desciption' => $challenge->strDescription,
+    'description' => $challenge->strDescription,
     'bgColor' => $challenge->strBgColor
 );
-
-print_r(json_encode($arChallenge));
+if (is_null($challenge->nId)) {
+    http_response_code(204);
+    echo '{"message": "No Challenge ID given."}';
+} else {
+    print_r(json_encode($arChallenge));
+}
