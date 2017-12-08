@@ -58,7 +58,7 @@ class Image
 
         // set values to object properties
         $this->nTeam = $row['team'];
-        $this->nVotes = $row['votes'];
+        $this->nVotes = $this->getUpvotes();
         $this->strPath = $row['path'];
     }
 
